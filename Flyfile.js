@@ -4,10 +4,10 @@ const dist = "dist"
 
 module.exports = {
   *scripts(fly) {
-    yield fly.source(js).babel({ presets: ["es2015"] }).target(`${dist}`)
+    yield fly.source(js).babel({ presets: ["es2015"] }).target(`${dist}/`)
   },
   *styles(fly) {
-    yield fly.source(sass).sass().target(`${dist}`)
+    yield fly.source(sass).sass().target(`${dist}/`)
   },
   *build(fly) {
     yield fly.parallel(["scripts", "styles"])
