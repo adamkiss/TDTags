@@ -1,5 +1,4 @@
 __app.js
 .DS_Store
 node_modules
-dist
 src/__app.js

@@ -1,0 +1,117 @@
+:root {
+  --white: #fff;
+  --offwhite: rgba(164, 165, 168, 0.04);
+  --primary: #5f49fc;
+  --grey-mid-dark: #7d7e83;
+  --grey-mid: #a4a5a8;
+  --grey-light: #cbcccd;
+  --offwhite-on-dark: #e5e5e6;
+  --offblack: #191d21;
+  --offblacker: #15181C;
+  --offblackest: #111316;
+  --primary-light: #5e5bff;
+  --primary-lighter: #817fff; }
+
+#app .custom-bgcolor.header-bar {
+  background: none !important; }
+
+#app.mode-day .header-bar a.logo, #app.mode-day .header-bar .header-tab > a,
+#app.mode-day .header-bar .header-tab-icon {
+  color: var(--primary) !important; }
+
+#app.mode-day #calendar .present {
+  background-color: var(--offwhite); }
+
+#app.mode-day .todo-text-header {
+  color: var(--grey-mid); }
+
+#app.mode-day footer {
+  background: white; }
+
+#app.mode-night {
+  background-color: var(--offblack) !important; }
+  #app.mode-night .header-bar a.logo, #app.mode-night .header-bar .header-tab > a,
+  #app.mode-night .header-bar .header-tab-icon {
+    color: var(--primary-light) !important; }
+  #app.mode-night section#calendar .column-list-scroll-container, #app.mode-night section#calendar .column, #app.mode-night section#lists .column-list-scroll-container, #app.mode-night section#lists .column {
+    border-color: #000 !important;
+    border-style: dotted !important; }
+  #app.mode-night section#calendar .column-list-nav .nav-left-button:hover, #app.mode-night section#calendar .column-list-nav .nav-right-button:hover, #app.mode-night section#calendar .column-list-nav .nav-icon:hover, #app.mode-night section#lists .column-list-nav .nav-left-button:hover, #app.mode-night section#lists .column-list-nav .nav-right-button:hover, #app.mode-night section#lists .column-list-nav .nav-icon:hover {
+    color: white !important; }
+  #app.mode-night section#lists, #app.mode-night section#lists .column {
+    background-color: var(--offblacker) !important; }
+  #app.mode-night section#lists .dot-nav {
+    background-color: var(--offblackest) !important; }
+  #app.mode-night section#calendar .future, #app.mode-night section#calendar .future [type="text"], #app.mode-night section#calendar .future a {
+    color: var(--offwhite-on-dark) !important; }
+  #app.mode-night section#calendar .future a:hover {
+    color: var(--primary-light) !important; }
+  #app.mode-night section#calendar .past .todo-item {
+    opacity: .6; }
+  #app.mode-night section#calendar .present, #app.mode-night section#calendar .present a:link {
+    color: var(--primary-lighter) !important; }
+  #app.mode-night section#calendar .present .day, #app.mode-night section#calendar .present .date {
+    color: var(--primary-light) !important; }
+  #app.mode-night .todo-text-header {
+    color: var(--grey-light) !important; }
+  #app.mode-night .header-container .notice,
+  #app.mode-night .header-dropdown-menu a:hover,
+  #app.mode-night .button.is-selected, #app.mode-night .protip,
+  #app.mode-night .todo-item:hover:not(.is-editing),
+  #app.mode-night .todo-item:hover:not(.is-editing) .todo-text,
+  #app.mode-night .todo-item:hover:not(.is-editing) .todo-text-header {
+    background: var(--offblacker) !important; }
+  #app.mode-night section#lists, #app.mode-night section#lists a:link, #app.mode-night input[type='text'] {
+    color: var(--grey-light) !important; }
+  #app.mode-night section#lists a:hover {
+    color: var(--primary-light) !important; }
+
+#app .header-bar .header-tab-icon {
+  stroke-width: 7%;
+  padding: 6px !important;
+  cursor: pointer; }
+
+.ak-custom-icon {
+  display: inline-block;
+  overflow: visible;
+  fill: none;
+  width: 16px;
+  stroke: currentColor;
+  stroke-width: inherit;
+  stroke-linecap: inherit;
+  stroke-linejoin: inherit; }
+
+section#calendar {
+  margin-top: -26px !important;
+  z-index: 1; }
+  section#calendar .calendar-column, section#calendar .column-list-nav {
+    padding-top: 106px !important; }
+  section#calendar .todo-list {
+    margin-bottom: -80px; }
+  section#calendar .todo-rules {
+    transform: translateY(106px); }
+
+section#lists {
+  margin-top: -80px;
+  z-index: 2;
+  position: relative; }
+
+footer {
+  position: relative;
+  z-index: 3; }
+
+.todo-text-header {
+  letter-spacing: .5px;
+  background: none !important; }
+
+.ak-label {
+  font-size: .9em !important;
+  font-weight: bold !important;
+  padding: 1px 2px 2px !important;
+  border-radius: 3px;
+  background: var(--offwhite);
+  color: var(--grey-mid); }
+  .is-done .ak-label {
+    opacity: .4; }
+  .mode-night .ak-label {
+    color: var(--grey-mid-dark); }
