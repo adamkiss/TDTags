@@ -115,8 +115,8 @@ footer {
 .todo-text-header { letter-spacing: .5px; background: none !important; }
 
 .ak-label {
-	font-size: .8em;
-	padding: 1px 2px !important; border-radius: 3px;
+	font-size: .9em !important; font-weight: bold !important;
+	padding: 1px 2px 2px !important; border-radius: 3px;
 	background: var(--offwhite); color: var(--grey-mid);
 
 	.is-done & { opacity: .4; }
