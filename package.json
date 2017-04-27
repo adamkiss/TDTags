@@ -1,0 +1,12 @@
+{
+ "scripts": {
+  "fly": "fly"
+ },
+ "dependencies": {
+  "babel-preset-es2015": "~6.24.1",
+  "fly": "~2.0.5",
+  "fly-babel": "~2.1.1",
+  "fly-sass": "~2.1.0",
+  "fly-watch": "~1.1.1"
+ }
+}
