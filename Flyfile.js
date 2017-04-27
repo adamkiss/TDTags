@@ -1,10 +1,15 @@
-const sass = "src/style.scss"
-const js = "src/script.js"
-const dist = "dist"
+/* eslint-disable */
+
+const sass = 'src/style.scss'
+const js = 'src/script.js'
+const dist = 'dist'
 
 module.exports = {
   *scripts(fly) {
-    yield fly.source(js).babel({ presets: ["es2015"] }).target(`${dist}/`)
+    yield fly.source(js).babel({
+      comments: false,
+      presets: ["es2015"]
+    }).target(`${dist}/`)
   },
   *styles(fly) {
     yield fly.source(sass).sass().target(`${dist}/`)
@@ -17,3 +22,5 @@ module.exports = {
   	yield fly.watch("src/*.scss", "styles")
   }
 }
+
+/* eslint-enable */

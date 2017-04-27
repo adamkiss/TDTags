@@ -44,7 +44,7 @@
 
 section#calendar {
 	margin-top: -26px !important; z-index: 1;
-	.calendar-column, .column-list-nav { padding-top: 106px; }
+	.calendar-column, .column-list-nav { padding-top: 106px !important; }
 	.todo-list { margin-bottom: -80px;}
 	.todo-rules { transform: translateY(106px);}
 }
@@ -62,8 +62,8 @@ footer {
 
 .ak-label {
 	font-size: .8em;
-	padding: 2px 3px; border-radius: 3px;
+	padding: 1px 2px !important; border-radius: 3px;
 	background: var(--offwhite); color: var(--grey-mid);
 
-	.is-done & { opacity: .6; }
+	.is-done & { opacity: .4; }
 }
