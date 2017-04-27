@@ -3,10 +3,16 @@
 	--offwhite: rgba(164, 165, 168, .04);
 	--primary: #5f49fc;
 
+	--grey-mid-dark: darken(rgb(164, 165, 168), 15%);
 	--grey-mid: rgb(164, 165, 168);
+	--grey-light: lighten(rgb(164, 165, 168), 15%);
+	--offwhite-on-dark: lighten(rgb(164, 165, 168), 25%);
 
 	--offblack: #191d21;
-	--primary-light: #5f49fc;
+	--offblacker: #15181C;
+	--offblackest: #111316;
+	--primary-light: #5e5bff;
+	--primary-lighter: lighten(#5e5bff, 7%);
 }
 
 #app .custom-bgcolor.header-bar { background: none !important; }
@@ -28,9 +34,57 @@
 		a.logo, .header-tab > a,
 		.header-tab-icon { color: var(--primary-light) !important; }
 	}
+	section#calendar, section#lists {
+		.column-list-scroll-container, .column {
+			border-color: #000 !important;
+			border-style: dotted !important;
+		}
+		.column-list-nav {
+			.nav-left-button:hover, .nav-right-button:hover, .nav-icon:hover {
+				color: white !important;
+			}
+		}
+	}
+	section#lists {
+		&, .column {
+			background-color: var(--offblacker) !important;
+		}
+		.dot-nav {
+			background-color: var(--offblackest) !important;
+		}
+	}
+
+	section#calendar .future {
+		&, [type="text"], a {
+			color: var(--offwhite-on-dark) !important;
+		}
+		a:hover { color: var(--primary-light) !important; }
+	}
+	section#calendar .past .todo-item {	opacity: .6; }
+	section#calendar .present {
+		&, a:link { color: var(--primary-lighter) !important; }
+		.day, .date { color: var(--primary-light) !important; }
+	}
+
+	.todo-text-header { color: var(--grey-light) !important; }
+	.header-container .notice,
+	.header-dropdown-menu a:hover,
+	.button.is-selected, .protip,
+	.todo-item:hover:not(.is-editing),
+	.todo-item:hover:not(.is-editing) .todo-text,
+	.todo-item:hover:not(.is-editing) .todo-text-header {
+		background: var(--offblacker) !important;
+	}
+
+	section#lists, section#lists a:link, input[type='text'] {
+		color: var(--grey-light) !important;
+	}
+	section#lists a:hover {
+		color: var(--primary-light) !important;
+	}
 }
 
-#app .header-bar .header-tab-icon { stroke-width: 7%; padding: 5px; cursor: pointer;}
+#app .header-bar .header-tab-icon { stroke-width: 7%; padding: 6px !important; cursor: pointer;}
 .ak-custom-icon {
 	display: inline-block;
 	overflow: visible;
@@ -66,4 +120,5 @@ footer {
 	background: var(--offwhite); color: var(--grey-mid);
 
 	.is-done & { opacity: .4; }
+	.mode-night & { color: var(--grey-mid-dark);}
 }
